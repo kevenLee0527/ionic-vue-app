@@ -1,6 +1,7 @@
 [Ionic-vue GitHub 地址](https://github.com/kevenLee0527/ionic-vue-app.git)
 
 该项目已集成路由、vu e x、axios
+css使用less语法 
 
 #### 编译
 
