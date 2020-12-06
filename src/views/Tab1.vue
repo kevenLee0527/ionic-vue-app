@@ -11,18 +11,39 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-    
-      <ExploreContainer name="Tab 1 page" />
+      <div @click="clickMe" class="fz20 u-red border-bottom">{{ count }}</div>
+      <van-button type="primary">主要按钮</van-button>
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+<script>
+import { computed } from "vue";
+import { useStore } from "vuex";
+import api from "../api";
+export default {
+  name: "Tab1",
+  setup() {
+    let store = useStore();
+    let clickMe = () => {
+      // store.commit('increment')
+      api.post("/loginForPolicePlatform1", {
+          username:"admin",
+          password:'admin123'
+        })
+        .then((res) => {
+          // console.log(res);
+        });
+    };
 
-export default  {
-  name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-}
+    return {
+      clickMe,
+      count: computed(() => store.state.count),
+      store,
+    };
+  },
+};
 </script>
+<style lang="less">
+@import "../theme/common.less";
+</style>

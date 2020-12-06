@@ -10,12 +10,20 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@capacitor/android": "^2.4.4",
     "@capacitor/core": "2.4.4",
+    "@capacitor/ios": "^2.4.4",
     "@ionic/vue": "^5.4.0",
     "@ionic/vue-router": "^5.4.0",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0",
+    "style-resources-loader": "^1.4.1",
+    "vant": "^3.0.0-rc.2",
     "vue": "^3.0.0-0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.4",
@@ -32,6 +40,7 @@
     "@vue/compiler-sfc": "^3.0.0-0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "^2.0.0-0",
+    "babel-plugin-import": "^1.13.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "typescript": "~3.9.3",

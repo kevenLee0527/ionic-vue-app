@@ -16,3 +16,6 @@ export default defineComponent({
   }
 });
 </script>
+<style lang="less">
+  @red:red;
+</style>
