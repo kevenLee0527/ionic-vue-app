@@ -14,7 +14,6 @@ module.exports = {
     port: 8080,
     https: false,
     hotOnly: false,
-    // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli-service.md#配置代理
     proxy: {
       '/gqss': {
         target: process.env.VUE_APP_BASE_URL,
@@ -22,7 +21,7 @@ module.exports = {
         secure: false,
         // ws: true,
         pathRewrite: {
-          '^/gqss': 'gqss'   // 请求数据路径别名,这里是注意将static/mock放入public文件夹
+          '^/gqss': 'gqss'   
         }
       }
     },
